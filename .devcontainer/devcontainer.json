@@ -1,7 +1,22 @@
 {
-	"name": "Untitled Node.js project",
-	"build": {
-		"dockerfile": "Dockerfile"
+	"name": "react.ts.dev",
+	"image": "mcr.microsoft.com/devcontainers/base:alpine",
+	"features": {
+		"ghcr.io/cirolosapio/devcontainers-features/alpine-node:0": {}
 	},
-  "remoteUser": "node"
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-azuretools.vscode-docker",
+				"EditorConfig.EditorConfig",
+				"esbenp.prettier-vscode",
+				"dbaeumer.vscode-eslint",
+				"Orta.vscode-jest",
+				"christian-kohler.npm-intellisense",
+				"humao.rest-client",
+				"redhat.vscode-yaml"
+			]
+		}
+	},
+	"forwardPorts": [5173]
 }
