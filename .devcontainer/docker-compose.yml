@@ -1,0 +1,9 @@
+services:
+  frontend:
+    build: 
+      context: .
+      dockerfile: ../frontend/Dockerfile
+    volumes:
+      - ../..:/workspaces:cached      
+    # network_mode: service:db
+    command: sleep infinity
