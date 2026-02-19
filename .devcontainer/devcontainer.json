@@ -1,22 +1,21 @@
 {
-	"name": "react.ts.dev",
-	"image": "mcr.microsoft.com/devcontainers/base:alpine",
-	"features": {
-		"ghcr.io/cirolosapio/devcontainers-features/alpine-node:0": {}
-	},
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"ms-azuretools.vscode-docker",
-				"EditorConfig.EditorConfig",
-				"esbenp.prettier-vscode",
-				"dbaeumer.vscode-eslint",
-				"Orta.vscode-jest",
-				"christian-kohler.npm-intellisense",
-				"humao.rest-client",
-				"redhat.vscode-yaml"
-			]
-		}
-	},
-	"forwardPorts": [5173]
+	"name": "ReactTS-App",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "frontend",
+  "workspaceFolder": "/workspaces",
+  "features": {
+    "ghcr.io/stu-bell/devcontainer-features/node:0": {
+      "version": "latest"
+    }
+  },
+  "forwardPorts": [3000],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "ms-azuretools.vscode-docker"
+      ]
+    }
+  }
 }

@@ -1,0 +1,8 @@
+services:
+  frontend:
+    build:
+      context: ../frontend
+      dockerfile: Dockerfile
+    volumes:
+      - ..:/workspaces:cached
+    command: /bin/sh -c "while sleep 1000; do :; done"
