@@ -1,8 +1,21 @@
 {
-  "name": "ReactTS Showcase",
+	"name": "ReactTS-App",
   "dockerComposeFile": "docker-compose.yml",
   "service": "frontend",
-  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
-  "forwardPorts": [5173]
-  //"postCreateCommand": "npm install"
+  "workspaceFolder": "/workspaces",
+  "features": {
+    "ghcr.io/stu-bell/devcontainer-features/node:0": {
+      "version": "latest"
+    }
+  },
+  "forwardPorts": [3000],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "ms-azuretools.vscode-docker"
+      ]
+    }
+  }
 }
